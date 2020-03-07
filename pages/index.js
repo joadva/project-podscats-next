@@ -15,20 +15,30 @@ export default class extends React.Component {
             <header>
                 Podscats
           </header>
-
-            {channels.map((channel) => (
-                <a className="channel" key={channel.id}>
-                    <img src={channel.urls.logo_image.original} alt="" />
-                    <h2>{channel.title}</h2>
-                </a>
-            ))}
+            <div className="channels">
+                {channels.map((channel) => (
+                    <a className="channel" key={channel.id}>
+                        <img src={channel.urls.logo_image.original} alt="" />
+                        <h2>{channel.title}</h2>
+                    </a>
+                ))}
+            </div>
 
             <style jsx>{`
                 header {
                   color: #fff;
                   background: #8756ca;
                   padding: 15px;
+                  text-align: 15px;
                  }
+                 .channels{
+                     display: grid;
+                     grid-gap: 15px;
+                     padding:15px;
+                     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+                    
+                 }
+
                  .channel {
                      display: block;
                      border-radius: 3px;
