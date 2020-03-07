@@ -1,4 +1,7 @@
 import 'isomorphic-fetch'
+import Link from 'next/link'
+
+
 export default class extends React.Component {
 
     //await evita enrar en callback help :V 
@@ -17,10 +20,12 @@ export default class extends React.Component {
           </header>
             <div className="channels">
                 {channels.map((channel) => (
-                    <a className="channel" key={channel.id}>
-                        <img src={channel.urls.logo_image.original} alt="" />
-                        <h2>{channel.title}</h2>
-                    </a>
+                    <Link href="/channel" prefetch>
+                        <a className="channel" key={channel.id}>
+                            <img src={channel.urls.logo_image.original} alt="" />
+                            <h2>{channel.title}</h2>
+                        </a>
+                    </Link>
                 ))}
             </div>
 

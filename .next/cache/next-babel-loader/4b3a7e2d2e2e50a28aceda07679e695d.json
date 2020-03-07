@@ -1,0 +1,1 @@
+{"ast":null,"code":"export default class extends React.Component {}","map":{"version":3,"sources":["/Users/joadva/Projects/Next.js/pages/channel.js"],"names":["React","Component"],"mappings":"AAAA,eAAe,cAAcA,KAAK,CAACC,SAApB,CAA8B","sourcesContent":["export default class extends React.Component {\n\n\n}"]},"metadata":{},"sourceType":"module"}
